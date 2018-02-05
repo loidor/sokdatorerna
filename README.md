@@ -11,7 +11,13 @@ Logga in som användaren som ska ändras. Starta ```regedit.exe``` och gå till 
 * ```DefaultPassword``` (Strängvärde). Skriv in lösenordet på användaren som automatiskt ska loggas in.
 * ```AutoAdminLogon``` (Strängvärde). Sätt till ```1```.
 
-Nästa registernyckel behöver ändras för den specifika användaren som ska loggas in. Öppna ```powershell.exe``` och importera användarens registernycklar till regedit.
+Nästa registernyckel behöver ändras för den specifika användaren som ska loggas in. 
+
+### Om användaren har rättigheter att ändra registret 
+Logga in på den användaren och gå till nyckeln ```HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System``` och ändra eller lägg till nyckeln ```DisableLockWorkstation``` (DWORD 32-bit) innehållandes ```0```.
+
+### Om användaren inte har rättigheter att ändra registret
+Öppna ```powershell.exe``` och importera användarens registernycklar till regedit.
 ```reg load HKU\AnnansRegister C:\Users\[Användarnamn]\ntuser.dat```
 
 Nu ska användarens nycklar finnas under ```HKEY_USERS``` i regedit.
