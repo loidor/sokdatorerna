@@ -28,7 +28,7 @@ Nu kommer sagda användare loggas in automatiskt och loggas inte ut av inaktivit
 
 Avslutningsvis ska windows skrivbordsmiljö ersättas av en egenskriven, som låser alla knappkombinationer som kan öppna saker, lägger till några nya knappkombinationer för administration samt automatiskt öppnar hemsidan som ska visas.
 
-Även den nyckeln finns under ```HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon```. Öppna nyckeln Shell och skriv in sökvägen till scriptet, exempelvis ```C:\startscript\autohotkeyshell.exe```. Om sökvägen innehåller mellanslag behöver den omges av "".
+Även den nyckeln finns under ```HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon```. Öppna nyckeln Shell och skriv in sökvägen till scriptet, exempelvis ```C:\extraprogram\startscript.exe```. Om sökvägen innehåller mellanslag behöver den omges av "".
 
 ## Autohotkey-script
 
@@ -67,7 +67,7 @@ F1::Return
 ^WheelUp::Return
 ^WheelDown::Return
 RButton & F1::Run cmd
-RButton & F2::Run "C:\kioskprogram\procexp.exe"
+RButton & F2::Run "C:\startprogram\procexp.exe"
 RButton & F3::Run cmd /C "shutdown -r -t 0"
 ^n::Return
 !F4::Return
