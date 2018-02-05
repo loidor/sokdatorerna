@@ -60,7 +60,7 @@ MButton::Return
 F1::Return
 ^+Delete::Return
 ^!Delete::Return
-^NumpadAdd:Return
+^NumpadAdd::Return
 ^NumpadSub::Return
 ^=::Return
 ^-::Return
